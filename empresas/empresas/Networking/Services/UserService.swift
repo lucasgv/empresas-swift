@@ -1,5 +1,5 @@
 //
-//  UserServices.swift
+//  UserService.swift
 //  empresas
 //
 //  Created by Lucas Valle on 13/10/17.
@@ -16,30 +16,33 @@ private extension String {
 }
 
 enum UserService {
-    case login()
+    case login(username:String, password: String)
 }
 
 extension UserService: TargetType {
     var baseURL: URL { return URL(string: "\(APIConfig.BASEURL)\(APIConfig.VERSION)")! }
     var path: String {
         switch self {
-        case .login():
-            return "/users/login"
+        case .login(_, _):
+            return "/users/auth/sign_in"
         }
     }
     var method: Moya.Method {
         switch self {
-        case .login():
-            return .get
+        case .login(_, _):
+            return .post
         }
     }
     var parameters: [String: Any]? {
-        return nil
+        switch self {
+        case .login(let username, let password):
+            return ["email": username, "password": password]
+        }
     }
     var sampleData: Data {
         switch self {
         case .login(_):
-            return "{{\"id\": \"1\", \"language\": \"Swift\", \"url\": \"https://api.github.com/repos/mjacko/Router\", \"name\": \"Router\"}}}".data(using: .utf8)!
+            return "{\"investor\":{\"id\":1,\"investor_name\":\"Teste Apple\",\"email\":\"testeapple@ioasys.com.br\",\"city\":\"BH\",\"country\":\"Brasil\",\"balance\":1000000,\"photo\":null,\"portfolio\":{\"enterprises_number\":0,\"enterprises\":[]},\"portfolio_value\":1000000,\"first_access\":false,\"super_angel\":false},\"enterprise\":null,\"success\":true}".data(using: .utf8)!
         }
     }
     var task: Task {

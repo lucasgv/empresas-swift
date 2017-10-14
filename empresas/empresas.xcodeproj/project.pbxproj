@@ -15,11 +15,11 @@
 		59377B7F1F916E5000EAAD24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59377B7D1F916E5000EAAD24 /* LaunchScreen.storyboard */; };
 		59377B8A1F916E5000EAAD24 /* empresasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59377B891F916E5000EAAD24 /* empresasTests.swift */; };
 		59377B951F916E5000EAAD24 /* empresasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59377B941F916E5000EAAD24 /* empresasUITests.swift */; };
-		59377BAE1F9170C500EAAD24 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59377BAD1F9170C500EAAD24 /* UserServices.swift */; };
+		59377BAE1F9170C500EAAD24 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59377BAD1F9170C500EAAD24 /* UserService.swift */; };
 		59377BB11F91754300EAAD24 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59377BB01F91754300EAAD24 /* APIConfig.swift */; };
-		59377BB51F9176BD00EAAD24 /* UserTrackerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59377BB41F9176BD00EAAD24 /* UserTrackerModel.swift */; };
 		59377BB71F9176CE00EAAD24 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59377BB61F9176CE00EAAD24 /* User.swift */; };
 		65D337D0E342ADF711EC8D4F /* Pods_empresas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E6DD33733D37F5F8DDDB9DB /* Pods_empresas.framework */; };
+		826CC3681F92C96C00D24A41 /* loginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CC3671F92C96C00D24A41 /* loginViewModel.swift */; };
 		AE0F4C59ECC1BAAD8DB86182 /* Pods_empresasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4816A6A7392315EAB2DC0E8 /* Pods_empresasTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,12 +56,12 @@
 		59377B901F916E5000EAAD24 /* empresasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = empresasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59377B941F916E5000EAAD24 /* empresasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = empresasUITests.swift; sourceTree = "<group>"; };
 		59377B961F916E5000EAAD24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59377BAD1F9170C500EAAD24 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
+		59377BAD1F9170C500EAAD24 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		59377BB01F91754300EAAD24 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
-		59377BB41F9176BD00EAAD24 /* UserTrackerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTrackerModel.swift; sourceTree = "<group>"; };
 		59377BB61F9176CE00EAAD24 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5B72DFDD30D46E4A36B7FA60 /* Pods_empresasUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_empresasUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6DD33733D37F5F8DDDB9DB /* Pods_empresas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_empresas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		826CC3671F92C96C00D24A41 /* loginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewModel.swift; sourceTree = "<group>"; };
 		92B7A6734A1C6AA8AD85FA5B /* Pods-empresas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-empresas.release.xcconfig"; path = "Pods/Target Support Files/Pods-empresas/Pods-empresas.release.xcconfig"; sourceTree = "<group>"; };
 		AE3B6440B1068133B86C6511 /* Pods-empresasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-empresasTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-empresasTests/Pods-empresasTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4816A6A7392315EAB2DC0E8 /* Pods_empresasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_empresasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,8 +137,10 @@
 			children = (
 				59377BAF1F9171A900EAAD24 /* Storyboards */,
 				59377BA31F916FE700EAAD24 /* Networking */,
+				59377BA81F91700D00EAAD24 /* Models */,
+				826CC3661F92C91800D24A41 /* ViewModels */,
 				59377BA21F916FDE00EAAD24 /* ViewControllers */,
-				59377BA41F916FEE00EAAD24 /* Utils */,
+				826CC3631F92B53200D24A41 /* Utils */,
 				59377B741F916E5000EAAD24 /* AppDelegate.swift */,
 				59377B7B1F916E5000EAAD24 /* Assets.xcassets */,
 				59377B801F916E5000EAAD24 /* Info.plist */,
@@ -176,40 +178,23 @@
 			isa = PBXGroup;
 			children = (
 				59377BAA1F91701900EAAD24 /* Services */,
-				59377BA91F91701300EAAD24 /* Trackers */,
-				59377BA81F91700D00EAAD24 /* Entities */,
 				59377BB01F91754300EAAD24 /* APIConfig.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		59377BA41F916FEE00EAAD24 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		59377BA81F91700D00EAAD24 /* Entities */ = {
+		59377BA81F91700D00EAAD24 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				59377BB61F9176CE00EAAD24 /* User.swift */,
 			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		59377BA91F91701300EAAD24 /* Trackers */ = {
-			isa = PBXGroup;
-			children = (
-				59377BB41F9176BD00EAAD24 /* UserTrackerModel.swift */,
-			);
-			path = Trackers;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		59377BAA1F91701900EAAD24 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				59377BAD1F9170C500EAAD24 /* UserServices.swift */,
+				59377BAD1F9170C500EAAD24 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -221,6 +206,21 @@
 				59377B7D1F916E5000EAAD24 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		826CC3631F92B53200D24A41 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		826CC3661F92C91800D24A41 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				826CC3671F92C96C00D24A41 /* loginViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FA742477D39EB0C60389BAF6 /* Frameworks */ = {
@@ -393,13 +393,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-empresasTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3276389B1C9881308B41313C /* [CP] Check Pods Manifest.lock */ = {
@@ -408,13 +411,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-empresas-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3BD21CE502E82869BB288CCA /* [CP] Copy Pods Resources */ = {
@@ -438,13 +444,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-empresasUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		804EF442027CDD94F9A0B05D /* [CP] Embed Pods Frameworks */ = {
@@ -468,9 +477,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-empresas/Pods-empresas-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftUtilities/RxSwiftUtilities.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftUtilities.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -515,9 +543,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				59377B771F916E5000EAAD24 /* ViewController.swift in Sources */,
-				59377BAE1F9170C500EAAD24 /* UserServices.swift in Sources */,
+				59377BAE1F9170C500EAAD24 /* UserService.swift in Sources */,
+				826CC3681F92C96C00D24A41 /* loginViewModel.swift in Sources */,
 				59377BB71F9176CE00EAAD24 /* User.swift in Sources */,
-				59377BB51F9176BD00EAAD24 /* UserTrackerModel.swift in Sources */,
 				59377BB11F91754300EAAD24 /* APIConfig.swift in Sources */,
 				59377B751F916E5000EAAD24 /* AppDelegate.swift in Sources */,
 			);
