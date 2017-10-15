@@ -19,6 +19,8 @@
 		59377BB11F91754300EAAD24 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59377BB01F91754300EAAD24 /* APIConfig.swift */; };
 		59377BB71F9176CE00EAAD24 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59377BB61F9176CE00EAAD24 /* User.swift */; };
 		65D337D0E342ADF711EC8D4F /* Pods_empresas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E6DD33733D37F5F8DDDB9DB /* Pods_empresas.framework */; };
+		823A6B5F1F93B2D600C204D5 /* Investor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A6B5E1F93B2D600C204D5 /* Investor.swift */; };
+		823A6B611F93BBD000C204D5 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A6B601F93BBD000C204D5 /* DefaultsKeys.swift */; };
 		826CC3681F92C96C00D24A41 /* loginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826CC3671F92C96C00D24A41 /* loginViewModel.swift */; };
 		AE0F4C59ECC1BAAD8DB86182 /* Pods_empresasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4816A6A7392315EAB2DC0E8 /* Pods_empresasTests.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		59377BB61F9176CE00EAAD24 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5B72DFDD30D46E4A36B7FA60 /* Pods_empresasUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_empresasUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6DD33733D37F5F8DDDB9DB /* Pods_empresas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_empresas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		823A6B5E1F93B2D600C204D5 /* Investor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Investor.swift; sourceTree = "<group>"; };
+		823A6B601F93BBD000C204D5 /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		826CC3671F92C96C00D24A41 /* loginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewModel.swift; sourceTree = "<group>"; };
 		92B7A6734A1C6AA8AD85FA5B /* Pods-empresas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-empresas.release.xcconfig"; path = "Pods/Target Support Files/Pods-empresas/Pods-empresas.release.xcconfig"; sourceTree = "<group>"; };
 		AE3B6440B1068133B86C6511 /* Pods-empresasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-empresasTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-empresasTests/Pods-empresasTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				59377BB61F9176CE00EAAD24 /* User.swift */,
+				823A6B5E1F93B2D600C204D5 /* Investor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 		826CC3631F92B53200D24A41 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				823A6B601F93BBD000C204D5 /* DefaultsKeys.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -487,6 +493,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwiftUtilities/RxSwiftUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -499,6 +506,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -543,10 +551,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				59377B771F916E5000EAAD24 /* ViewController.swift in Sources */,
+				823A6B611F93BBD000C204D5 /* DefaultsKeys.swift in Sources */,
 				59377BAE1F9170C500EAAD24 /* UserService.swift in Sources */,
 				826CC3681F92C96C00D24A41 /* loginViewModel.swift in Sources */,
 				59377BB71F9176CE00EAAD24 /* User.swift in Sources */,
 				59377BB11F91754300EAAD24 /* APIConfig.swift in Sources */,
+				823A6B5F1F93B2D600C204D5 /* Investor.swift in Sources */,
 				59377B751F916E5000EAAD24 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

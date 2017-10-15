@@ -11,6 +11,7 @@ import Moya_ModelMapper
 import UIKit
 import RxCocoa
 import RxSwift
+import SwiftyUserDefaults
 
 class ViewController: UIViewController {
 
@@ -27,23 +28,6 @@ class ViewController: UIViewController {
         let viewModel = LoginViewModel(usernameText: usernameTextField.rx.text.orEmpty.asDriver(),
                                        passwordText: passwordTextField.rx.text.orEmpty.asDriver())
         
-        viewModel.usernameBGColor
-            .drive(onNext: { [unowned self] color in
-                UIView.animate(withDuration: 0.2) {
-                    self.usernameTextField.superview?.backgroundColor = color
-                }
-            })
-            .addDisposableTo(disposeBag)
-        
-        
-        viewModel.passwordBGColor
-            .drive(onNext: { [unowned self] color in
-                UIView.animate(withDuration: 0.2) {
-                    self.passwordTextField.superview?.backgroundColor = color
-                }
-            })
-            .addDisposableTo(disposeBag)
-        
         viewModel.credentialsValid
             .drive(onNext: { [unowned self] valid in
                 self.enterButton.isEnabled = valid
@@ -59,8 +43,17 @@ class ViewController: UIViewController {
                     .observeOn(SerialDispatchQueueScheduler(qos: .userInteractive))
             }
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [unowned self] status in
-                
+            .subscribe(onNext: { [unowned self] User in
+                if User?.success == true {
+                    Defaults[.userLogged] = true
+                } else {
+                    let alertController = UIAlertController(title: "Atenção", message: "Login ou senha inválidos.", preferredStyle: .alert)
+                    
+                    let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
             })
             .addDisposableTo(disposeBag)
         
@@ -70,6 +63,11 @@ class ViewController: UIViewController {
             .drive(onNext: { [unowned self] active in
                 self.hideKeyboard()
                 self.activityIndicator.isHidden = !active
+                if active {
+                    self.activityIndicator.startAnimating()
+                } else {
+                    self.activityIndicator.stopAnimating()
+                }
                 self.enterButton.isEnabled = !active
             })
             .addDisposableTo(disposeBag)

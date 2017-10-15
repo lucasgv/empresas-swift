@@ -17,9 +17,6 @@ import RxSwiftUtilities
 struct LoginViewModel {
     
     let activityIndicator = ActivityIndicator()
-    
-    let usernameBGColor: Driver<UIColor>
-    let passwordBGColor: Driver<UIColor>
     let credentialsValid: Driver<Bool>
     let provider: RxMoyaProvider<UserService>
     
@@ -34,12 +31,6 @@ struct LoginViewModel {
             .distinctUntilChanged()
             .throttle(0.3)
             .map { $0.utf8.count > 3 }
-        
-        usernameBGColor = usernameValid
-            .map { $0 ? UIColor.black : UIColor.white }
-        
-        passwordBGColor = passwordValid
-            .map { $0 ? UIColor.black : UIColor.white }
         
         credentialsValid = Driver.combineLatest(usernameValid, passwordValid) { $0 && $1 }
         self.provider = RxMoyaProvider<UserService>()

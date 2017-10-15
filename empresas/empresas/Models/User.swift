@@ -11,9 +11,11 @@ import Mapper
 struct User: Mappable {
 
     let success: Bool
+    let investor: Investor?
     
     init(map: Mapper) throws {
         try success = map.from("success")
+        investor = map.optionalFrom("investor")
     }
 }
 

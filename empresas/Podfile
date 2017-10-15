@@ -10,6 +10,7 @@ target 'empresas' do
   pod 'Moya-ModelMapper/RxSwift', '~> 4.1.0'
   pod 'RxOptional'
   pod 'RxSwiftUtilities', :git => 'https://github.com/RxSwiftCommunity/RxSwiftUtilities.git'
+  pod 'SwiftyUserDefaults'
 
   target 'empresasTests' do
     inherit! :search_paths
